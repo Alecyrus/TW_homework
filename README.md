@@ -1,8 +1,11 @@
 # TW_homework
 
 > Author: Junkai Huang
+
 > Language: Python 3.5.2
+
 > Platform: Ubuntu 16.04/vim
+
 > Dependence: Redis
 
 ## Install
@@ -40,7 +43,13 @@ price = 3,40;6,50;4,60
 ```
 
 ### Start
-#### 测试例
+
+### 附加命令
+>`quit`: 退出系统
+
+>`clear`: 清空数据库，重新初始化系统
+
+#### 测试例一
 ```
 Hello! Welcome to Badminton Vneues Management System(BVMS).
 Initialize the database.....Done
@@ -86,5 +95,48 @@ Confirm:Y
 Deleting....Done
 (BVMS)> 
 ```
+
+#### 测试例二
+```
+Hello! Welcome to Badminton Vneues Management System(BVMS).
+Initialize the database.....Done
+Initialize the system.....Done
+Input 'quit' to exit. 
+(BVMS)> U002 2017-08-01 19:00~22:00 A
+Success: the booking is accepted!
+(BVMS)> U003 2017-08-01 18:00~20:00 A
+Error: the booking conflicts with existing bookings!
+(BVMS)> U002 2017-08-01 19:00~22:00 A C
+Success: the booking is accepted!
+(BVMS)> U002 2017-08-01 19:00~22:00 A C
+Error: the booking being cancelled does not exist!
+(BVMS)> U003 2017-08-01 18:00~20:00 A
+Success: the booking is accepted!
+(BVMS)> U003 2017-08-02 13:00~17:00 B
+Success: the booking is accepted!
+(BVMS)> 
+收⼊汇总:
+---
+场地:A
+2017-08-01 18:00~20:00 120元
+2017-08-01 19:00~22:00 违约⾦ 45.0元
+⼩计: 165.0元
+
+场地:B
+2017-08-02 13:00~17:00 200元
+⼩计: 200.0元
+
+场地:C
+⼩计: 0.0元
+
+场地:D
+⼩计: 0.0元
+
+---
+总计: 365.0元
+
+```
+
+
 
 
