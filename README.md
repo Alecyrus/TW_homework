@@ -10,6 +10,7 @@
 
 ## Install
 >$ sudo apt-get install redis-server python3-pip
+
 >$ sudo pip3 install redis
 
 ## Usage
